@@ -1,0 +1,17 @@
+{
+    "type": 3,
+    "custom_id": "Commands",
+    "placeholder": "Nia type ur bank name",
+    "options": [
+        {
+            "label": "Action",
+            "value": "Action",
+            "description": "Action"
+        },
+        {
+            "label": "Anime",
+            "value": "Anime",
+            "description": "Anime"
+        }
+    ]
+}

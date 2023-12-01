@@ -1,0 +1,30 @@
+const { User } = require("../../Schemas/User");
+const client = require("../../index");
+
+const db = new.crearDB();
+
+module.exports = {
+    name: '',
+    category: '',
+    description: '',
+    alias: [],
+
+    async execute(message, args) {
+        const server = message.guild.id;
+        const prefix = await db.get("prefix." + server)
+        try {
+
+        } catch (error) {
+            const Error = new EmbedBuilder()
+                .setColor(0xFF0000)
+                .setDescription(
+                    `**Error al ejecutar el comando**\n- \`\`\`${prefix}${this.name}\`\`\`\n\n` +
+                    `**ErrMessage:**\n - \`\`\`${e.message}\`\`\`\n` +
+                    `**Stacktrace:**\n - \`\`\`${e.stack}\`\`\`\n`
+                )
+            message.channel.send({ embeds: [Error] });
+        } finally {
+            console.log(`\n💭  [CMD] ${message.author.globalName} [${message.author.tag}] ha usado el comando ${prefix}${this.name} en el servidor ${message.guild.name}`);
+        }
+    }
+}

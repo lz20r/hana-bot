@@ -1,0 +1,9 @@
+{
+    "token" : "MTE1OTI3MjQ3MDQ0NTAzMTQ1NQ.GFxKIK.f8f1Rt7McIWymUzryElnzCWdsTwbOkxWjxviEQ", 
+    "clientId": "1159272470445031455",
+    "prefix": "n+",
+    "devid": "1033160523044376616",
+    "guildId": "1143237780466569306",
+    "mongopass": "mongodb+srv://Natsumii:Natsumi21@natsumi.4xiasre.mongodb.net/?retryWrites=true&w=majority",
+    "mono": "mongodb+srv://Natsumii:Natsumi21@atlascluster.4xiasre.mongodb.net/"
+}

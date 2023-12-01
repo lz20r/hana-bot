@@ -1,0 +1,61 @@
+{
+    "all items": {
+        "galleta": {
+            "id": "10",
+            "precio": "10",
+            "emoji": "🍪",
+            "nombre": "cookie",
+            "descripcion": "A chocolate chip cookie."
+        },
+        "pastel": {
+            "id": "11",
+            "precio": "25",
+            "emoji": ":moon_cake:",
+            "nombre": "cake",
+            "descripcion": "A delicious and tasty cake."
+        },
+        "pica": {
+            "id": "508",
+            "precio": "50",
+            "emoji": "🪓",
+            "nombre": "pickaxe",
+            "descripcion": "With this you can collect some minerals and sell them."
+        },
+        "caña": {
+            "id": "512",
+            "precio": "50",
+            "emoji": "🎣",
+            "nombre": "Rod",
+            "descripcion": "Fishing Rod."
+        },
+        "botella": {
+            "id": "305",
+            "precio": "100",
+            "emoji": "<:MT_Botella:1173282660039278733>",
+            "nombre": "Bottle",
+            "descripcion": "With this you can collect some water and sell them."
+        },
+        "Anvil de bronce": {
+            "id": "100",
+            "precio": "100",
+            "emoji": "<:MT_bronze_anvil:1173291159305601054>",
+            "nombre": "Bronze anvil",
+            "descripcion": "With this you can see in the dark."
+        },
+        "Llave Inglesa": {
+            "id": "523",
+            "precio": "250s",
+            "emoji": "wrench",
+            "nombre": "Wrench",
+            "descripcion": "A wrench used to repair tools."
+        }
+    }, 
+    "buffs": {
+        "flashlight": {
+            "id": "100",
+            "emoji": "🔦",
+            "nombre": "Flashlight",
+            "descripcion": "With this you can see in the dark."
+        }
+    }
+}

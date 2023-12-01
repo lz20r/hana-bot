@@ -1,5 +1,0 @@
-DROP DATABASE IF EXISTS kinakodb;
-
-CREATE DATABASE IF NOT EXISTS kinakodb;
-
-USE kinakodb; 

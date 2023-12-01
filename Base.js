@@ -1,8 +1,6 @@
 const { User } = require("../../Schemas/User");
 const client = require("../../index");
 
-const db = new.crearDB();
-
 module.exports = {
     name: '',
     category: '',

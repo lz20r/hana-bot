@@ -1,3 +1,4 @@
+const { error } = require('console')
 const { EmbedBuilder } = require('discord.js')
 
 module.exports = {
@@ -10,27 +11,30 @@ module.exports = {
         const { prefix, guildId } = message
         const { db } = client
         try {
+            let prefixCanal = "1180580003713404960"
             const [rows] = await db.execute('SELECT * FROM historialPrefix WHERE guildId = ?', [guildId]);
-            if (rows.length > 0) {
-                const embed = new EmbedBuilder()
-                    .setTitle(`Prefix history of the server **${message.guild.name}**`)
-                    .setColor(0x2f3136)
-                    .setTimestamp()
-                .setDescription(`**Prefixes:**\n\n${rows.map(row => `\`\`\`${row.prefix} <@${row.userid}> - ${row.fecha}`).join('\n')}\`\`\``)
-                    .setFooter({ text: `Requested by ${message.author.globalName}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
-                    .setAuthor({
-                        name: message.author.globalName
-                    })
+            const canalPrefix = client.channels.cache.get(prefixCanal);
+            if (canalPrefix) {
+                if (rows.length > 0) {
+                    const embed = new EmbedBuilder()
+                        .setTitle(`Prefix history of the server **${message.guild.name}**`)
+                        .setColor(0x2f3136)
+                        .setTimestamp()
+                        .setDescription(`**Prefixes:**\n\n${rows.map(row => `\`${row.prefix}\` <@${row.userid}> \`${row.fecha}\``).join('\n')}`)
+                        .setFooter({ text: `Requested by ${message.author.globalName}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setAuthor({ name: message.author.globalName })
 
-                message.channel.send({ embeds: [embed] })
-            } else {
-                message.channel.send(`[${message.author.tag}: ${message.author.globalName}] no have a prefix history yet.`)
+                    canalPrefix.send({ embeds: [embed] })
+                    message.channel.send({ embeds: [embed] })
+                } else {
+                    canalPrefix.send(`[${message.author.tag}: ${message.author.globalName}] no have a prefix history yet.`)
+                }
             }
         } catch (e) {
             const Error = new EmbedBuilder()
                 .setColor(0xFF0000)
                 .setDescription(
-                    `**Error al ejecutar el comando**\n- \`\`\`${prefix}${this.name}\`\`\`\n\n` +
+                    `**Error al ejecutar el comando**\n- \`\`\`${prefix}${this.name} ${args.join(' ')}\`\`\`\n\n` +
                     `**ErrMessage:**\n - \`\`\`${e.message}\`\`\`\n` +
                     `**Stacktrace:**\n - \`\`\`${e.stack}\`\`\`\n`
                 )

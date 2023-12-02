@@ -18,8 +18,8 @@ module.exports = {
         }
     ],
     async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         try {
             let user = message.options.getUser('user') || message.author
             let food

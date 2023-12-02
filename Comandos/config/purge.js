@@ -17,8 +17,8 @@ module.exports = {
         max: 100
     }],
     async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         if (args[0] == "all") {
             let n = 0
             message.channel.send("Deleting everything...") // editaste esto, verdad?

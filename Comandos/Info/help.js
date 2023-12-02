@@ -6,7 +6,6 @@ const {
     StringSelectMenuOptionBuilder,
 } = require("discord.js");
 let server;
-let prefix;
 
 const commands = require("../../Handlers/commands"); // This is the file that contains all the commands
 
@@ -18,7 +17,7 @@ module.exports = {
     alias: ["h", "help", "ayuda", "へるぷ"],
     async execute(message, args) {
         server = message.guild.id;
-        prefix = await db.get("prefix." + server)
+        const { prefix } = message
 
         client = message.client;
 

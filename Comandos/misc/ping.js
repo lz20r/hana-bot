@@ -11,8 +11,8 @@ module.exports = {
     alias: ["p", "ping", "pingtest", "ピング"],
 
     async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         try {
 
             const buttons = new ActionRowBuilder().addComponents(

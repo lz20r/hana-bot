@@ -18,7 +18,7 @@ module.exports = {
 	 */
 	async execute(message, args, client) {
 		const server = message.guild.id;
-		const prefix = await db.get("prefix." + server)
+		const { prefix } = message
 		try {
 			const badgesemojis = {
 				"Owner Crown": `<:MT_purpleowner:1162784382021546055>`,

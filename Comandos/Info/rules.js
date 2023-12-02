@@ -20,8 +20,8 @@ module.exports = {
     ],
 
     async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         try {
             const embed = new EmbedBuilder()
                 .setColor("Red")

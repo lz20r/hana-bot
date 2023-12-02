@@ -11,7 +11,7 @@ module.exports = {
 
 	async execute(message, args) {
 		const server = message.guild.id;
-		const prefix = await db.get("prefix." + server)
+		const { prefix } = message
 		try {
 			var resp = [
 				"In my opinion, yes",

@@ -36,12 +36,11 @@ module.exports = {
                     iconURL: interaction.client.user.displayAvatarURL({ dynamic: true })
                 })
             if (!args[0]) {
-               i
                 return interaction.channel.send({ embeds: [embed], components: [button] })
             }
             const command = commands.get(args[0]) || commands.find(c => c.alias && c.alias.includes(args[0]));
             if (!command) return interaction.channel.send("That command doesn't exist!");
-        } catch (error) {
+        } catch (e) {
             const Error = new EmbedBuilder()
                 .setColor(0xFF0000)
                 .setDescription(

@@ -11,8 +11,8 @@ module.exports = {
     alias: ["b", "bal", "balance", "Kinabal", "Kinabalance", "バランス", "きなこバランス"],
 
     async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         try {
 
             const targetUserId = args[0] || message.author.id;

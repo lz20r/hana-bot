@@ -11,8 +11,8 @@ module.exports = {
     async execute(message, args) {
         const client = require("../../index");
         const { stats } = require("../../Embeds/General/stats")(client, message);
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+        const { prefix } = message
+        const { db } = client
         try {
             message.channel.send({ embeds: [stats] });
         } catch (error) {

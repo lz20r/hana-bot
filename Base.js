@@ -7,12 +7,12 @@ module.exports = {
     description: '',
     alias: [],
 
-    async execute(message, args) {
-        const server = message.guild.id;
-        const prefix = await db.get("prefix." + server)
+    async execute(message, args, client) {
+        const { prefix } = message
+
         try {
 
-        } catch (error) {
+        } catch (e) {
             const Error = new EmbedBuilder()
                 .setColor(0xFF0000)
                 .setDescription(

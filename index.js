@@ -3,6 +3,7 @@ const { Guilds, GuildsMembers, GuildsMessages } = GatewayIntentBits;
 const { User, Message, GuildMember, ThreadMember } = Partials;
 const Discord = require('discord.js')
 const { ActionRowBuilder, ButtonBuilder } = require('discord.js')
+require('dotenv').config();
 
 const client = new Client({
 	intents: [3276799],
@@ -16,7 +17,6 @@ console.log((`
 |   Loading Commands and Events |    /-/ By naiara /-/   |
 ╚════════════════════════════════════════════════════════╝
 `));
-
 
 
 module.exports = client;

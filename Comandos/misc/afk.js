@@ -12,7 +12,7 @@ module.exports = {
 	alias: ["AFK", "Afk", "aFk", "afK", "AFk", "aFK", "AfK", "afk"],
 	async execute(message, args) {
 		const server = message.guild.id;
-		const prefix = await db.get("prefix." + server)
+		const { prefix } = message
 		try {
 			let data = await afk.findOne({ guildId: message.guild.id, userId: message.author.id })
 			let reason = args.join(" ") || "No provided"

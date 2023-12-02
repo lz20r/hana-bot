@@ -14,19 +14,19 @@ client.on("ready", async () => {
   console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
 
   client.db = await require('../../kinakodb')(client)
-
-  await mongoose.connect(config.mongopass, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-
-  if (mongoose.connect) {
-    console.log(("MONGODB CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
-    console.log("┃ ".cyan + `💭  ${client.user.username}: [情報]  モンゴデータベースに接続しました`.magenta + "┃".cyan);
-    console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Connected to MongoDB`.blue + "            ┃".cyan);
-    console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
-  }
-
+  
+    await mongoose.connect(config.mongopass, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+  
+    if (mongoose.connect) {
+      console.log(("MONGODB CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
+      console.log("┃ ".cyan + `💭  ${client.user.username}: [情報]  モンゴデータベースに接続しました`.magenta + "┃".cyan);
+      console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Connected to MongoDB`.blue + "            ┃".cyan);
+      console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
+    }
+  
   client.user.setPresence({
     activities: [
       {

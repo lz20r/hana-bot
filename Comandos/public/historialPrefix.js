@@ -16,7 +16,7 @@ module.exports = {
                     .setTitle(`Prefix history of the server **${message.guild.name}**`)
                     .setColor(0x2f3136)
                     .setTimestamp()
-                .setDescription(`**Prefixes:**\n\n${rows.map(row => `\\${row.prefix} -<@${row.userid}> - ${row.fecha}`).join('\n')}`)
+                .setDescription(`**Prefixes:**\n\n${rows.map(row => `\`\`\`${row.prefix} <@${row.userid}> - ${row.fecha}`).join('\n')}\`\`\``)
                     .setFooter({ text: `Requested by ${message.author.globalName}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
                     .setAuthor({
                         name: message.author.globalName

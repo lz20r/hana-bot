@@ -2,10 +2,4 @@
 /sftp.json
 /.apollo\crushes
 /.npm
-/.vscode
-/LICENSE 
-.env
-README.md
-.gitignore
-LICENSE
-kinakodb/Credenciales y Creacción de tablas.txt
+/.vscode 

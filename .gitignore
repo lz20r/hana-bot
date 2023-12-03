@@ -3,3 +3,4 @@
 /.apollo\crushes
 /.npm
 /.vscode 
+.env

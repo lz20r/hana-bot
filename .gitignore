@@ -3,6 +3,9 @@
 /.apollo\crushes
 /.npm
 /.vscode
-/LICENSE
-/.gitignore
-/README.md
+/LICENSE 
+.env
+README.md
+.gitignore
+LICENSE
+kinakodb/Credenciales y Creacción de tablas.txt

@@ -8,10 +8,9 @@ require("colors");
 client.on("ready", async () => {
 
   console.log((
-    "CLIENT STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
-  console.log("┃ ".cyan + `💭  ${client.user.username}: [情報] 用意のできた`.magenta + "┃".cyan);
-  console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Ready`.blue + "      ┃".cyan);
-  console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
+    "CLIENT STATUS ━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
+  console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Ready`.bgCyan + " ┃".cyan);
+  console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
 
   client.db = await require('../../kinakodb')(client)
   
@@ -21,10 +20,9 @@ client.on("ready", async () => {
     });
   
     if (mongoose.connect) {
-      console.log(("MONGODB CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
-      console.log("┃ ".cyan + `💭  ${client.user.username}: [情報]  モンゴデータベースに接続しました`.magenta + "┃".cyan);
-      console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Connected to MongoDB`.blue + "            ┃".cyan);
-      console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
+      console.log(("MONGODB CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
+      console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Connected to MongoDB`.bgCyan + " ┃".cyan);
+      console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
     }
   
   client.user.setPresence({

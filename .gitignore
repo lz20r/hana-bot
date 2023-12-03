@@ -1,1 +1,8 @@
 /node_modules
+/sftp.json
+/.apollo\crushes
+/.npm
+/.vscode
+/LICENSE
+/.gitignore
+/README.md

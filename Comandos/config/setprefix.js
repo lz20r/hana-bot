@@ -1,6 +1,7 @@
+
+
 const { Guild, EmbedBuilder } = require("discord.js");
 const { ChannelType } = require("discord-api-types/v9");
-
 
 module.exports = {
     name: "setprefix",
@@ -44,8 +45,11 @@ module.exports = {
         } finally {
             console.log(`\n💭  [CMD] ${message.author.globalName} [${message.author.tag}] ha usado el comando ${prefix}${this.name} en el servidor ${message.guild.name}`);
         }
+    }
+}
 
-        /*const server = message.guild.id;
+
+ /*const server = message.guild.id;
         try {
             
             try {
@@ -81,5 +85,3 @@ module.exports = {
         } finally {
             console.log(`\n💭  [CMD] ${message.author.globalName} [${message.author.tag}] ha usado el comando ${prefix}${this.name} en el servidor ${message.guild.name}`);
         } */
-    }
-}

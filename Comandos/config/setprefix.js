@@ -18,8 +18,7 @@ module.exports = {
             const newPrefix = args[0];
             const { guildId } = message;
             const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' '); 
-
-            //const timestamp = Date.now();
+ 
             const [rows] = await db.execute('SELECT * FROM prefijos WHERE guildId = ?', [guildId]);
             if (rows.length > 0) {
                 await db.execute('UPDATE prefijos SET prefix = ?, userid = ?, fecha = ? WHERE guildId = ?', [newPrefix, message.author.id, timestamp, guildId]);

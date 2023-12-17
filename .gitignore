@@ -4,3 +4,8 @@
 /.npm
 /.vscode 
 .env
+config.json
+kinakodb.session.sql
+package-lock.json
+package.json
+README.md

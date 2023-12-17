@@ -10,7 +10,7 @@
   "nodemonConfig": {
     "events": {
       "restart": "cls && node index.js"
-    }
+    } 
   },
   "keywords": [],
   "author": "",

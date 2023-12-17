@@ -17,7 +17,7 @@ const commands = require("../../Handlers/commands"); // This is the file that co
 module.exports = {
     name: "currency",
     description: "this command if for eco",
-    category: "Currency",
+    category: "Eco",
     alias: ["Eco", "currency", "eco", "経済"],
     async execute(message) {
         server = message.guild.id;

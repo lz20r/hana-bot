@@ -6,7 +6,7 @@ const client = require("../../index");
 
 module.exports = {
     name: "register",
-    category: "Genshin Impact",
+    category: "Genshin",
     description: "Form registration",
     alias: ["reg", "regist", "Reg", "Regist", "登録する"],
 

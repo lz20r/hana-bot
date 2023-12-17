@@ -6,7 +6,7 @@ const client = require("../../index");
 
 module.exports = {
     name: 'balance',
-    category: 'Currency',
+    category: 'Eco',
     description: 'this command is for bal\n',
     alias: ["b", "bal", "balance", "Kinabal", "Kinabalance", "バランス", "きなこバランス"],
 

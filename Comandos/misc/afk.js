@@ -7,7 +7,7 @@ const client = require("../../index");
 
 module.exports = {
 	name: 'afk',
-	category: 'Miscellaneous',
+	category: 'Misc',
 	description: 'Set your afk message',
 	alias: ["AFK", "Afk", "aFk", "afK", "AFk", "aFK", "AfK", "afk"],
 	async execute(message, args) {

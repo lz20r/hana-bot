@@ -18,8 +18,8 @@ const items = require("../../json/shop");
 
 module.exports = {
     name: "shop",
-    description: "this command if for shop\n",
-    category: "Currency",
+    description: "this command if for shop\n",  
+    category: "Eco",
     alias: ['s', "S", "Shop", "shop", "tieda"],
     execute: async (message, args) => {
 

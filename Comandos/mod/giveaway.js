@@ -47,7 +47,7 @@ function formatDuration(duration) {
 module.exports = {
   name: "giveaway",
   description: "Create a giveaway",
-  category: "Moderation",
+  category: "Mod",
   alias: [
     "giveaway", "Giveaways", "Giveaway", "giveaways", "GIVEAWAY", "GIVEAWAYS",
     "sorteo", "Sorteo", "SORTEO", "sorteos", "Sorteos", "SORTEOS",

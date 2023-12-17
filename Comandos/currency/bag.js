@@ -6,7 +6,7 @@ const client = require("../../index");
 
 module.exports = {
     name: 'bag',
-    category: 'Currency',
+    category: 'Eco',
     description: 'See your bag',
     alias: ["bag", 'バッグ'],
     options: [

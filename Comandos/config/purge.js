@@ -5,7 +5,7 @@ const client = require("../../index");
 
 module.exports = {
     name: "purge",
-    category: 'Configuration',
+    category: 'Config',
     description: 'Deletes messages from the current channel.',
     alias: ["C", "P", "c", "clear", "クリア", "なつみクリア"],
     permissions: PermissionFlagsBits.ManageMessages,

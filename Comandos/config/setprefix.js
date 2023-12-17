@@ -5,7 +5,7 @@ const { ChannelType } = require("discord-api-types/v9");
 
 module.exports = {
     name: "setprefix",
-    category: 'config',
+    category: 'Config',
     description: 'Change the prefix of this bot.',
     alias: ["Prefix", "setP", "sP", "sp", "setp", "changePrefix", "cP", "接頭語", "セットプレフィックス"],
     permissions: ["Administration"],

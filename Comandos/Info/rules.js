@@ -6,7 +6,7 @@ const client = require("../../index");
 
 module.exports = {
     name: 'rules',
-    category: 'Information',
+    category: 'Info',
     description: 'You will see the rules of the server.',
     alias: ['rules', 'reglas', 'reglasdelserver', 'rulesofserver'],
     usage: 'rules',

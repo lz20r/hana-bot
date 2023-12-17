@@ -13,7 +13,7 @@ const commands = require("../../Handlers/commands"); // This is the file that co
 module.exports = {
     name: "help",
     description: "this command if for help",
-    category: "Information",
+    category: "Info",
     alias: ["h", "help", "ayuda", "へるぷ"],
     async execute(message, args) {
         server = message.guild.id;
@@ -111,6 +111,7 @@ module.exports = {
                     `\`${prefix} help mod\`     ∷ ${help_emojis["mod"]} Moderation\n` +
                     `\`${prefix} help music\`   ∷ ${help_emojis["music"]} Music\n` +
                     `\`${prefix} help nsfw\`    ∷ ${help_emojis["nsfw"]} NSFW\n` +
+                    `\`${prefix} help public\`  ∷ ${help_emojis["public"]} Public\n` +
                     `\`${prefix} help reaction\`∷ ${help_emojis["reaction"]} Reaction\n` +
                     `\`${prefix} help utils\`   ∷ ${help_emojis["utils"]} Utilities\n` +
                     `\`${prefix} help genshin\` ∷ ${help_emojis["genshin"]} Genshin Impact`
@@ -143,12 +144,12 @@ module.exports = {
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Configuration`)
                         .setEmoji(help_emojis["config"])
-                        .setValue("Manager")
+                        .setValue("Config")
                         .setDescription("Customize your server"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Currency`)
                         .setEmoji(help_emojis["currency"])
-                        .setValue("Currency")
+                        .setValue("Eco")
                         .setDescription("Currency Commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Fun`)
@@ -158,27 +159,27 @@ module.exports = {
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Information`)
                         .setEmoji(help_emojis["info"])
-                        .setValue("Information")
+                        .setValue("Info")
                         .setDescription("Information Commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Administration`)
                         .setEmoji(help_emojis["manager"])
-                        .setValue("Administration")
+                        .setValue("Admin")
                         .setDescription("Manage your server"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Marriages`)
                         .setEmoji(help_emojis["marriage"])
-                        .setValue("Marriages")
+                        .setValue("Marry")
                         .setDescription("Marriages commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Miscellaneous`)
                         .setEmoji(help_emojis["misc"])
-                        .setValue("Miscellaneous")
+                        .setValue("Misc")
                         .setDescription("Variaty of commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Moderation`)
                         .setEmoji(help_emojis["mod"])
-                        .setValue("Moderation")
+                        .setValue("Mod")
                         .setDescription("Moderative Commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Music`)
@@ -191,19 +192,24 @@ module.exports = {
                         .setValue("NSWF")
                         .setDescription("NSWF commands (+18)"),
                     new StringSelectMenuOptionBuilder()
+                        .setLabel(`Public`)
+                        .setEmoji(help_emojis["nsfw"])
+                        .setValue("Public")
+                        .setDescription("Public Commands"),
+                    new StringSelectMenuOptionBuilder()
                         .setLabel(`Reaction`)
                         .setEmoji(help_emojis["reaction"])
-                        .setValue("Reaction")
+                        .setValue("React")
                         .setDescription("Reaction Commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Utilities`)
                         .setEmoji(help_emojis["utils"])
-                        .setValue("Utilities")
+                        .setValue("Utils")
                         .setDescription("Utils Commands"),
                     new StringSelectMenuOptionBuilder()
                         .setLabel(`Genshin Impact`)
                         .setEmoji(help_emojis["genshin"])
-                        .setValue("Genshin Impact")
+                        .setValue("Genshin")
                         .setDescription("Genshin Impact Commands"),
                 );
             const row = new ActionRowBuilder().addComponents(select);

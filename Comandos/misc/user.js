@@ -5,7 +5,7 @@ const { EmbedBuilder, } = require("discord.js");
 
 module.exports = {
 	name: "user",
-	category: "Miscleaneous",
+	category: "Misc",
 	description: "You will obtain the info of a user",
 	alias: ["ui", "userinfo", "user-info", "user_info", "", "usuario", "usuarioinfo",
 		"usuario-info", "usuario_info", "ユーザー", "ユーザー情報", "ユーザー_情報", "ユーザ"

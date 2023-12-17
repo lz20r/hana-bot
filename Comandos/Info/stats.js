@@ -4,7 +4,7 @@ const { EmbedBuilder } = require("discord.js")
 const anticrash = require("../../Handlers/anticrash")
 module.exports = {
     name: 'stats',
-    category: 'Information',
+    category: 'Info',
     description: 'command for seen the stats',
     alias: ['stats', 'estads', 'estadísticas', 'std', 'st', 'estd', 'ST', 'STD', 'ESTD', 'STATS'],
 

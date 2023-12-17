@@ -6,7 +6,7 @@ const client = require("../../index");
 
 module.exports = {
     name: "ping",
-    category: "Miscleaneous",
+    category: "Misc",
     description: "ping test",
     alias: ["p", "ping", "pingtest", "ピング"],
 

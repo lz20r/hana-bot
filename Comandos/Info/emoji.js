@@ -6,7 +6,7 @@ const client = require("../../index");
 let prefix;
 module.exports = {
     name: 'emoji',
-    category: 'Information',
+    category: 'Info',
     description: 'Obtain emoji information',
     usage: `${prefix} emoji-info <emoji>`,
     alias: ['info-emoji', 'emoji-info', 'emoji', 'ei', 'ie'],

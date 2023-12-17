@@ -10,7 +10,7 @@ const {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("ping")
-        .setDescription("ping test"),
+        .setDescription("ping test"), 
 
     /**
      * 
@@ -36,9 +36,13 @@ module.exports = {
                     iconURL: interaction.client.user.displayAvatarURL({ dynamic: true })
                 })
             if (!args[0]) {
-                return interaction.channel.send({ embeds: [embed], components: [button] })
+
+               //eso ando viendo ya se espera
+                interaction.channel.send({ embeds: [embed], components: [button] })
+
+                await interaction.reply({content: 'Envie el panel de ping (ejemplo)', ephemeral: true })
             }
-            const command = commands.get(args[0]) || commands.find(c => c.alias && c.alias.includes(args[0]));
+            const command = command.get(args[0]) || command.find(c => c.alias && c.alias.includes(args[0]));
             if (!command) return interaction.channel.send("That command doesn't exist!");
         } catch (e) {
             const Error = new EmbedBuilder()
@@ -47,10 +51,10 @@ module.exports = {
                     `**Error al ejecutar el comando**\n- \`\`\`/${this.data.name}\`\`\`/\n` +
                     `**Error Message:**\n - \`\`\`${e.message}\`\`\`\n` +
                     `**Stacktrace:**\n - \`\`\`${e.stack}\`\`\`\n`
-                )
+                ) 
+            interaction.channel.send({ embeds: [Error] });
             interaction.deferReply();
             interaction.deleteReply();
-            interaction.channel.send({ embeds: [Error] });
         } finally {
             console.log(`\n💭  [CMD] ${interaction.user.globalName} [${interaction.user.tag}] ha usado el comando /${this.data.name} en el servidor ${interaction.guild.name}`);
         }

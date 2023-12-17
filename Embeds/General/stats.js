@@ -17,7 +17,7 @@ module.exports = (client, message) => {
     const si = require('systeminformation');
     const os = require("os");
     const RAM = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(1);
-    const CPU = os.cpus()[0].times;
+    const CPU = ((process.cpuUsage().system + process.cpuUsage().user) / 1024 / 1024).toFixed(1);
 
     return {
         stats: new EmbedBuilder()
@@ -45,13 +45,13 @@ module.exports = (client, message) => {
                     name: `**❱ ボットの情報.**\n`,
                     value:
                         ` \`\`\`RAM:${loading(RAM, 100)} [${Math.floor(RAM, 100 * 100)}%]\n` +
-                        `CPU:${loading(CPU, 100)} [${Math.floor(CPU, 100 * 100)}%] \`\`\` `,
+                        `CPU: ${loading(CPU, 100)} [${Math.floor(CPU, 100 * 100)}%]\`\`\` `,
                     inline: false
                 },
 
                 {
                     name: '**❱ システムパフォーマンス**',
-                    value:
+                    value: 
                         ` \`\`\`CPU: ${os.cpus()[0].model} ${os.cpus()[0].speed} GHz\n` +
                         `RAM: ${(RAM)} MB\n` +
                         `OS: ${os.type()} ${os.release()} ${os.arch()}\`\`\``,

@@ -75,7 +75,9 @@ client.on("interactionCreate", async (interaction) => {
 
 
 async function helpGod(interaction) {
-	const prefix = await db.get("prefix." + interaction.guild.id)
+	const {prefix}  = interaction
+	const {db} = client
+	//const prefix = await db.get("prefix." + interaction.guild.id)
 	const tipo = interaction.values[0]
 	const todosComandos = client.commands.map(x => x) || "None"
 	const comandos = todosComandos.filter(x => x.category.toLowerCase() == tipo.toLowerCase())

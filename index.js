@@ -4,12 +4,15 @@ const { User, Message, GuildMember, ThreadMember } = Partials;
 const Discord = require('discord.js')
 const { ActionRowBuilder, ButtonBuilder } = require('discord.js')
 require('dotenv').config();
-
-const client = new Client({
+require ('./Events/Messages/mention.js')
+let client;
+const Hana = require('./core/client/Client');
+client = Hana;
+/*var client = new Client({
 	intents: [3276799],
 	GatewayIntentBits: [Guilds, GuildsMembers, GuildsMessages],
 	partials: [User, Message, GuildMember, ThreadMember]
-});
+});*/
 const config = require("./config.json");
 
 console.log((`
@@ -18,8 +21,8 @@ console.log((`
 ╚════════════════════════════════════════════════════════╝
 `));
 
-
 module.exports = client;
+
 require("colors")
 require("./Handlers");
 require("./slashCommands");
@@ -50,29 +53,6 @@ client.on("messageCreate", async (message) => { // detectar cada mensaje
 		return;
 	}
 
-});
-
-
-client.on('messageCreate', async (message) => {
-	if (message.author.bot) {
-		return;
-	}
-
-	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
-		const embedmencion = new Discord.EmbedBuilder()
-			.setColor('c1d5db')
-			.setDescription(`Current bot prefix: \`-\`\nUse **-help** for a list of commands.`)
-
-		const row = new ActionRowBuilder()
-			.addComponents(
-				new ButtonBuilder()
-					.setStyle(5)
-					.setLabel('support')
-					.setURL('https://discord.gg/momotoro')
-			);
-
-		message.reply({ embeds: [embedmencion], components: [row], allowedMentions: { repliedUser: false } });
-	}
 });
 
 client.login(config.token);

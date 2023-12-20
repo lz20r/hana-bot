@@ -12,7 +12,14 @@ client.on("ready", async () => {
   console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Ready`.bgCyan + " ┃".cyan);
   console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
 
-  client.db = await require('../../kinakodb')(client)
+  try {
+    client.db = await require('../../kinakodb')(client)
+  } catch (error) {
+    console.log(("MySQL CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
+    console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO] Not connected to MySQLDB`.bgCyan + " ┃".cyan);
+    console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
+  }
+
   
     await mongoose.connect(config.mongopass, {
       useNewUrlParser: true, useUnifiedTopology: true

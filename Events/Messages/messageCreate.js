@@ -1,19 +1,18 @@
 const client = require("../../index");
 const afk = require("../../Schemas/afk");
-const Prefix = require("../../config.json").prefix;
-require("../../Handlers/commands");
 const { EmbedBuilder } = require("discord.js");
 
 
 client.on("messageCreate", async (message) => {
+  
     if (message.channel.type === 'dm' || message.author.bot) {
         return;
     }
     await afk(message);
     const [row] = await client.db.query(`SELECT prefix FROM prefijos WHERE guildId = ?`, [message.guild.id])
 
-    const prefix = row.length > 0 ? row[0].prefix : Prefix
-
+    const prefix = row.length > 0 ? row[0].prefix : prefix 
+    const { db } =  require("../../Handlers/commands");
     //const prefix = await db.get(`prefix.${message.guild.id}`) || Prefix;
     const logChannelId = "1185953106891124896"; // ID del canal de registro
 

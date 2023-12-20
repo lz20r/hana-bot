@@ -7,12 +7,7 @@ require('dotenv').config();
 require ('./Events/Messages/mention.js')
 let client;
 const Hana = require('./core/client/Client');
-client = Hana;
-/*var client = new Client({
-	intents: [3276799],
-	GatewayIntentBits: [Guilds, GuildsMembers, GuildsMessages],
-	partials: [User, Message, GuildMember, ThreadMember]
-});*/
+client = Hana; 
 const config = require("./config.json");
 
 console.log((`

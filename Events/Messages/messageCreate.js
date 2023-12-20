@@ -1,4 +1,5 @@
-const client = require("../../index");
+const Hana = require('../../core/client/Client');
+client = Hana; 
 const afk = require("../../Schemas/afk");
 const { EmbedBuilder } = require("discord.js");
 

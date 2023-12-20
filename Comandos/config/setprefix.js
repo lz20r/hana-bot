@@ -1,5 +1,4 @@
 
-
 const { Guild, EmbedBuilder } = require("discord.js");
 const { ChannelType } = require("discord-api-types/v9");
 
@@ -16,7 +15,7 @@ module.exports = {
             if (!args[0]) return message.channel.send(`[${message.author.tag}: ${message.author.globalName}] had try to change the prefix **${prefix}** of the server **${message.guild.name}** but didn't excify the new one so will mantain the actual prefix **${prefix}**`);
             const newPrefix = args[0];
             const { guildId } = message;
-            const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+            const timestamp = new Date().toISOString().slice(0, 19).replace('T', '');
 
             const [rows] = await db.execute("SELECT * FROM prefijos WHERE guildId = ?", [guildId]);
             if (rows.length > 0) {

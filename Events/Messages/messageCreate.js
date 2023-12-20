@@ -14,7 +14,8 @@ client.on("messageCreate", async (message) => {
 
     const prefix = row.length > 0 ? row[0].prefix : prefix 
     const { db } =  require("../../Handlers/commands");
-    //const prefix = await db.get(`prefix.${message.guild.id}`) || Prefix;
+    await db.get(`prefix.${message.guild.id}`) || prefix;
+    
     const logChannelId = "1185953106891124896"; // ID del canal de registro
 
     if (message.content.toLowerCase().startsWith("prefix") && message.author.id == "1033160523044376616") {
@@ -77,3 +78,7 @@ client.on("messageCreate", async (message) => {
         }
     }
 });
+
+
+
+

@@ -1,11 +1,14 @@
 
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require('discord.js');
 const Hana = require('../../core/client/Client');
-const client = Hana;
+const client = Hana; 
+
 //ah es que me daba error antes de que no estaba Discord.....
 client.on("messageCreate", async (message) => {
+	const { prefix } = message
+	const { db } = Hana;
+
 	//return console.log("Se ha producido un messageCreate");
-    const { prefix } = message 
 	if (message.author.bot) {
 		return;
 	}
@@ -26,4 +29,4 @@ client.on("messageCreate", async (message) => {
 		message.reply({ embeds: [embedmencion], components: [row], allowedMentions: { repliedUser: false } });
 	}
 });
-    
+ 

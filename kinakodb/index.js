@@ -9,11 +9,14 @@ module.exports = async function (client) {
             database: process.env.DB_NAME,
         })
         connection.connect();
-        console.log(("MySQL CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
+        console.log(("MySQL CONECTION STATUS ━━━━━━━━━━━━━━━━━━━━━━━━━┓".cyan))
         console.log("┃ ".cyan + `💭  ${client.user.username}: [INFO]  Connected to MySQLDB`.bgCyan + " ┃".cyan);
-        console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
+        console.log(("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛".cyan))
         return connection;
     } catch (error) {
         console.log(error);
     }
 }
+
+
+

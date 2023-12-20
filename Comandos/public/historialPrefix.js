@@ -1,3 +1,6 @@
+
+// ok mira el servidor
+
 const { error } = require('console')
 const { EmbedBuilder } = require('discord.js')
 

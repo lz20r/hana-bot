@@ -51,28 +51,6 @@ client.on("messageCreate", async (message) => { // detectar cada mensaje
 	}
 
 });
-
-
-client.on('messageCreate', async (message) => {
-	if (message.author.bot) {
-		return;
-	}
-
-	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
-		const embedmencion = new Discord.EmbedBuilder()
-			.setColor('c1d5db')
-			.setDescription(`Current bot prefix: \`-\`\nUse **-help** for a list of commands.`)
-
-		const row = new ActionRowBuilder()
-			.addComponents(
-				new ButtonBuilder()
-					.setStyle(5)
-					.setLabel('support')
-					.setURL('https://discord.gg/momotoro')
-			);
-
-		message.reply({ embeds: [embedmencion], components: [row], allowedMentions: { repliedUser: false } });
-	}
-});
-
+ 
 client.login(config.token);
+ 

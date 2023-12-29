@@ -15,8 +15,7 @@ client.on("ready", async () => {
   client.db = await require('../../kinakodb')(client)
   
     await mongoose.connect(config.mongopass, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useNewUrlParser: true, useUnifiedTopology: true
     });
   
     if (mongoose.connect) {
